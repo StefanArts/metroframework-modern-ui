@@ -182,10 +182,10 @@ namespace MetroFramework.Controls
 
         private DoubleBufferedTextBox baseTextBox;
 
-        private MetroLabelSize metroLabelSize = MetroLabelSize.Medium;
-        [DefaultValue(MetroLabelSize.Medium)]
+        private int metroLabelSize = 14;
+        [DefaultValue(14)]
         [Category(MetroDefaults.PropertyCategory.Appearance)]
-        public MetroLabelSize FontSize
+        public int FontSize
         {
             get { return metroLabelSize; }
             set { metroLabelSize = value; Refresh(); }

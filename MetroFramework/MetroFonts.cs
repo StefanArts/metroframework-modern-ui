@@ -31,12 +31,6 @@ using System;
 
 namespace MetroFramework
 {
-    public enum MetroLabelSize
-    {
-        Small,
-        Medium,
-        Tall
-    }
 
     public enum MetroLabelWeight
     {
@@ -391,37 +385,16 @@ namespace MetroFramework
             return Default(12f);
         }
 
-        public static Font Label(MetroLabelSize labelSize, MetroLabelWeight labelWeight)
+        public static Font Label(int labelSize, MetroLabelWeight labelWeight)
         {
-            if (labelSize == MetroLabelSize.Small)
-            {
                 if (labelWeight == MetroLabelWeight.Light)
-                    return DefaultLight(12f);
+                    return DefaultLight(labelSize);
                 if (labelWeight == MetroLabelWeight.Regular)
-                    return Default(12f);
+                    return Default(labelSize);
                 if (labelWeight == MetroLabelWeight.Bold)
-                    return DefaultBold(12f);
-            }
-            else if (labelSize == MetroLabelSize.Medium)
-            {
-                if (labelWeight == MetroLabelWeight.Light)
-                    return DefaultLight(14f);
-                if (labelWeight == MetroLabelWeight.Regular)
-                    return Default(14f);
-                if (labelWeight == MetroLabelWeight.Bold)
-                    return DefaultBold(14f);
-            }
-            else if (labelSize == MetroLabelSize.Tall)
-            {
-                if (labelWeight == MetroLabelWeight.Light)
-                    return DefaultLight(18f);
-                if (labelWeight == MetroLabelWeight.Regular)
-                    return Default(18f);
-                if (labelWeight == MetroLabelWeight.Bold)
-                    return DefaultBold(18f);
-            }
+                    return DefaultBold(labelSize);
 
-            return DefaultLight(14f);
+            return DefaultLight(labelSize);
         }
 
         public static Font TextBox(MetroTextBoxSize linkSize, MetroTextBoxWeight linkWeight)
@@ -556,43 +529,18 @@ namespace MetroFramework
             return Default(12f);
         }
 
-        public static Font WaterMark(MetroLabelSize labelSize, MetroWaterMarkWeight labelWeight)
+        public static Font WaterMark(int labelSize, MetroWaterMarkWeight labelWeight)
         {
-            if (labelSize == MetroLabelSize.Small)
-            {
                 if (labelWeight == MetroWaterMarkWeight.Light)
-                    return DefaultLight(12f);
+                    return DefaultLight(labelSize);
                 if (labelWeight == MetroWaterMarkWeight.Regular)
-                    return Default(12f);
+                    return Default(labelSize);
                 if (labelWeight == MetroWaterMarkWeight.Bold)
-                    return DefaultBold(12f);
+                    return DefaultBold(labelSize);
                 if (labelWeight == MetroWaterMarkWeight.Italic)
-                    return DefaultItalic(12f);
-            }
-            else if (labelSize == MetroLabelSize.Medium)
-            {
-                if (labelWeight == MetroWaterMarkWeight.Light)
-                    return DefaultLight(14f);
-                if (labelWeight == MetroWaterMarkWeight.Regular)
-                    return Default(14f);
-                if (labelWeight == MetroWaterMarkWeight.Bold)
-                    return DefaultBold(14f);
-                if (labelWeight == MetroWaterMarkWeight.Italic)
-                    return DefaultItalic(14f);
-            }
-            else if (labelSize == MetroLabelSize.Tall)
-            {
-                if (labelWeight == MetroWaterMarkWeight.Light)
-                    return DefaultLight(18f);
-                if (labelWeight == MetroWaterMarkWeight.Regular)
-                    return Default(18f);
-                if (labelWeight == MetroWaterMarkWeight.Bold)
-                    return DefaultBold(18f);
-                if (labelWeight == MetroWaterMarkWeight.Italic)
-                    return DefaultItalic(18f);
-            }
+                    return DefaultItalic(labelSize);
 
-            return DefaultLight(14f);
+            return DefaultLight(labelSize);
         }
 
         public static Font Button(MetroButtonSize linkSize, MetroButtonWeight linkWeight)

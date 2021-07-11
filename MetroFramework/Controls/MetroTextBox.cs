@@ -973,7 +973,7 @@ namespace MetroFramework.Controls
                 }
             }
 
-            private Font _waterMarkFont = MetroFramework.MetroFonts.WaterMark(MetroLabelSize.Small, MetroWaterMarkWeight.Italic);
+            private Font _waterMarkFont = MetroFramework.MetroFonts.WaterMark(12, MetroWaterMarkWeight.Italic);
             public Font WaterMarkFont
             {
                 get { return _waterMarkFont; }

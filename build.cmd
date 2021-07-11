@@ -5,10 +5,7 @@ set outputdir=%cwd%\build
 set cwd=%CD%
 set commonflags=/p:Configuration=%config%;AllowUnsafeBlocks=true /p:CLSCompliant=False
 
-if %PROCESSOR_ARCHITECTURE%==x86 (
-         set msbuild="%WINDIR%\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe"
-) else ( set msbuild="%WINDIR%\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe"
-)
+set msbuild="%WINDIR%\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe"
 
 :build
 echo ---------------------------------------------------------------------
